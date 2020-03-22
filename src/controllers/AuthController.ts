@@ -87,6 +87,7 @@ class AuthController {
             jwt: token,
             // tslint:disable-next-line: object-literal-sort-keys
             lastLoggedIn: user.lastLoggedIn,
+            name: user.name
           });
        
       });

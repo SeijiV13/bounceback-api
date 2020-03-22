@@ -27,12 +27,13 @@ class UserController {
         if (userExists) {
           res.status(500).send({ message: messages.error.usernameExists, type: 'error' });
           return;
-        } 
+        } else {      
+            userRepository.save(user).then(async createdUser => {
+                res.status(201).send({ message: messages.success.userCreated, type: 'success' });
+            });
+            
+        }
 
-        userRepository.save(user).then(async createdUser => {
-            res.status(201).send({ message: messages.success.userCreated, type: 'success' });
-        });
-        
     }
 }
 
