@@ -28,8 +28,7 @@
       "typeorm": "0.2.22"
    },
    "engines": {
-      "node": "~12.16.1",
-      "npm": "~6.4.1"
+      "node": "8.11.4"
    },
    "scripts": {
       "clean": "rm -rf dist && mkdir dist",
