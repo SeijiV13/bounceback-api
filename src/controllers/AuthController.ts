@@ -18,9 +18,8 @@ class AuthController {
       res.status(400).send();
     }
     let user: User;
-
   
-    user = await userRepository.findOne({ where: { email: username } });
+    user = await userRepository.findOne({ where: { username } });
     if (!user) {
         res.status(404).send({ message: messages.error.incorrecUserPassword, type: 'error' });
         return;
@@ -81,14 +80,12 @@ class AuthController {
       config.jwtSecret,
       { expiresIn: '1h' }
     );
-    let firstTimeLoggedIn = false;
     try {
       user.lastLoggedIn = new Date();
       userRepository.save(user).then((loggedUser: User) => {
           res.send({
             jwt: token,
             // tslint:disable-next-line: object-literal-sort-keys
-            firstTimeLoggedIn,
             lastLoggedIn: user.lastLoggedIn,
           });
        

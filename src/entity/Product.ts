@@ -1,8 +1,9 @@
 import { ObjectIdColumn, ObjectID, Column } from "typeorm";
 
+
 export class Product {
     @ObjectIdColumn()
-    id: ObjectID
+    id: ObjectID;
     @Column()
     name: string;
     @Column()

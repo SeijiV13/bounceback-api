@@ -21,6 +21,7 @@
       "class-validator": "^0.11.1",
       "cors": "^2.8.5",
       "express": "^4.17.1",
+      "helmet": "^3.21.3",
       "jsonwebtoken": "^8.5.1",
       "mongodb": "^3.0.8",
       "reflect-metadata": "^0.1.10",
@@ -32,15 +33,15 @@
    },
    "scripts": {
       "clean": "rm -rf dist && mkdir dist",
-      "start-dev": "ts-node src/server.ts",
+      "start-dev": "ts-node src/index.ts",
       "build-ts": "tsc -p .",
       "postinstall": "npm run build-ts",
-      "serve": "babel-node  dist/server.js",
-      "watch-node-ts": "nodemon src/server.ts",
-      "watch-node": "nodemon dist/server.js",
+      "serve": "babel-node  dist/index.js",
+      "watch-node-ts": "nodemon src/index.ts",
+      "watch-node": "nodemon dist/index.js",
       "watch-ts": "tsc -w",
       "build": "npm run build-ts && npm run build-babel",
-      "start": "npm run build-ts && npm run build && node ./dist/server.js",
+      "start": "npm run build-ts && npm run build && node ./dist/index.js",
       "build-babel": "babel -d ./dist ./src -s",
       "lint": "tslint -c tslint.json 'src/**/*.ts'"
    }

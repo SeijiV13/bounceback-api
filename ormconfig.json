@@ -2,7 +2,7 @@
    "type": "mongodb",
    "url": "mongodb+srv://bounceback:sa@cluster0-zwo4n.mongodb.net/test?retryWrites=true&w=majority",
    "useUnifiedTopology": true,
-   "database": "test",
+   "database": "bounceback",
    "synchronize": true,
    "logging": false,
    "entities": [

@@ -6,10 +6,12 @@ export class User {
     @ObjectIdColumn()
     id: ObjectID;
     @Column()
+    name: string;
+    @Column({nullable: false})
     username: string;
-    @Column()
+    @Column({nullable: false})
     password: string;
-    @Column()
+    @Column({nullable: false})
     role: string;
     @Column()
     lastLoggedIn: Date;
