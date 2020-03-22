@@ -13,5 +13,7 @@ export class DonorTicket {
     @Column()
     contactNumber: string;
     @Column()
-    products: Product[];
+    products: {id: string, quantity: number}[]
+    @Column()
+    status: string;
 }

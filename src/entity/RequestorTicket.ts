@@ -16,4 +16,6 @@ export class RequestorTicket {
     contactNumber: string;
     @Column()
     products: Product[];
+    @Column()
+    status: string;
 }
