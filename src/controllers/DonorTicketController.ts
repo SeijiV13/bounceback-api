@@ -20,11 +20,12 @@ class DonorTicketController {
 
     
     public static createDonorTicket = async (req: Request, res: Response) => {
-        const { name, contactPerson, contactNumber, products } = req.body;
+        const { name, contactPerson, address, contactNumber, products } = req.body;
         const donorTicketRepository = getRepository(DonorTicket);
        
         const donorTicket = new DonorTicket();
         donorTicket.name = name;
+        donorTicket.address = address;
         donorTicket.contactPerson = contactPerson;
         donorTicket.contactNumber = contactNumber;
         donorTicket.products = products

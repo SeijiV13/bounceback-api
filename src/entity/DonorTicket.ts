@@ -9,6 +9,8 @@ export class DonorTicket {
     @Column()
     name: string
     @Column()
+    address: string;
+    @Column()
     contactPerson: string;
     @Column()
     contactNumber: string;
