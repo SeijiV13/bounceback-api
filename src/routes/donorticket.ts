@@ -6,9 +6,9 @@ import DonorTicketController from '../controllers/DonorTicketController';
 const router = Router();
 
 
-router.get('/', [checkJwt], DonorTicketController.getAllDonorTicket);
-router.post('/', [checkJwt], DonorTicketController.createDonorTicket);
-router.put('/:id', [checkJwt], DonorTicketController.approveDonorTicket);
+router.get('/', DonorTicketController.getAllDonorTicket);
+router.post('/', DonorTicketController.createDonorTicket);
+router.put('/:id', DonorTicketController.approveDonorTicket);
 
 
 export default router;

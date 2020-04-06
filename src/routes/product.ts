@@ -6,7 +6,7 @@ import ProductController from '../controllers/ProductController';
 const router = Router();
 
 
-router.get('/', [checkJwt], ProductController.getAllProducts);
+router.get('/', ProductController.getAllProducts);
 router.post('/', [checkJwt], ProductController.createProduct);
 router.delete('/:id', [checkJwt], ProductController.deleteProduct);
 

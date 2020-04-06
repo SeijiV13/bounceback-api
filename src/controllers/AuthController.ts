@@ -95,5 +95,10 @@ class AuthController {
       res.status(401).send();
     }
   }
+  public static testJwt = (req: Request, res: Response) =>  {
+
+    return res.status(200).send();
+  }
 }
+
 export default AuthController;

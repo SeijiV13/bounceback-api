@@ -6,9 +6,9 @@ import RequestorTicketController from '../controllers/RequestorTicketController'
 const router = Router();
 
 
-router.get('/', [checkJwt], RequestorTicketController.getAllRequestorTicket);
-router.post('/', [checkJwt],  RequestorTicketController.createRequestorTicket);
-router.put('/:id', [checkJwt], RequestorTicketController.approveRequestorTicket);
+router.get('/', RequestorTicketController.getAllRequestorTicket);
+router.post('/',  RequestorTicketController.createRequestorTicket);
+router.put('/:id', RequestorTicketController.approveRequestorTicket);
 
 
 export default router;
